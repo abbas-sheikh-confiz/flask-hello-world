@@ -15,28 +15,14 @@ app.config['DEBUG'] = True
 
 # define the view using a function, which returns a string
 def hello_world():
-    return "Hello, World!"
+    return "Hello, World!?!?!?!?!?"
 
 # dynamic route
 @app.route("/test/<search_query>")
 def search(search_query):
     return search_query
 
-# testing route with integer value
-@app.route("/integer/<int:value>")
-def int_type(value):
-    print(value + 1)
-    return "correct"
-# testing route with float value
-@app.route("/float/<float:value>")
-def float_type(value):
-    print(value + 1)
-    return "correct"
-# testing route that accepts slashes
-@app.route("/path/<path:value>")
-def path_type(value):
-    print(value)
-    return "correct"
+# difference response types
 @app.route("/name/<name>")
 def index(name):
     if name == 'Abbas':
